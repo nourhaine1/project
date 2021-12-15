@@ -1,9 +1,12 @@
 <?php
 session_start();
+include './db.php';
+
 if (isset($_SESSION['user'])) {
     header('Location: ./index.html');
     exit();
 }
+
 $errorMSG = "";
 if (isset($_POST['submit'])){
         if (empty($_POST["email"])) {
@@ -50,8 +53,16 @@ if (isset($_POST['submit'])){
         $user=array($email,$password,$name,$age,$ville);
         $_SESSION['user']=($user);
         var_dump  ($_SESSION['user']);
-// redirect to success page
+// to my database
 
+   if($errorMSG=" "){
+    $sql = "INSERT INTO client (email, name, password, ageEnfant,ville) VALUES (?, ?, ?, ?, ?)";
+    $query = $pdo->prepare($sql);
+    $query->execute([$email, $name, $password, $age,$ville]);
+    header('Location: ./index.html');
+   }
+
+    
 
 }
 ?>
