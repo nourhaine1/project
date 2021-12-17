@@ -27,6 +27,8 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -79,11 +81,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle page-scroll" href="index.html#video" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEO</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="article-details.html"><span class="item-text">ARTICLE DETAILS</span></a>
+                            <a class="dropdown-item" href="article-details.html"><span class="item-text">Videos</span></a>
                             <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
+                            <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Films</span></a>
                             <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
+                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Jeux</span></a>
                         </div>
                     </li>
                     <!-- end of dropdown menu -->
@@ -107,20 +109,23 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Log In</h1>
-                   <p>You don't have a password? Then please <a class="white" href="sign-up.html">Sign Up</a></p> 
+                   <p>vous n'avez pas de compte ?<a class="white" href="sign-up.html">s'inscrire</a></p> 
                     <!-- Sign Up Form -->
-                    <?php if (count($errors) > 0) : ?>
+                    <?php if (count($errors)>0) : ?>
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <?= $errors[0] ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <?php endif; ?>
                     <div class="form-container">
-                        <form   action="login.php"  method="post" data-toggle="validator" data-focus="false" >
-                    
+                        <form   action="<?php $_SERVER['PHP_SELF'] ?>"  method="post" data-toggle="validator" data-focus="false" >
+                        
+                       
                             <div class="form-group">
                                 <input name="email" type="email" class="form-control-input" id="lemail" required>
+                              
                                 <label class="label-control" for="lemail">Email</label>
+                            
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
@@ -135,12 +140,7 @@
                                 <div id="lmsgSubmit" class="h3 text-center hidden"></div>
                             </div>
                         </form>
-                        <?php if (count($errors) > 0) : ?>
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <?= $errors[0] ?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        <?php endif; ?>
+                        
                     </div> <!-- end of form container -->
                     <!-- end of sign up form -->
 

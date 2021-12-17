@@ -2,11 +2,11 @@
 include './db.php';
 include'./functions.php';
 session_start();
-/*if (isset($_SESSION['user'])) {
+if (isset($_SESSION['user'])) {
     header('Location: ./index.php');
     exit();
 }
-*/
+
 
 
 $errors = [];
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
         goto show_form;
     }
 
-    if (strlen($password) < 6) {
+    if (strlen($password) <6) {
         $errors[0] = 'Password invalid';
         goto show_form;
     }
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     } else {
         if (password_verify($password, $user['password'])) {
             $_SESSION['id'] = $user['id'];
-            $_SESSION['name'] = $user['name'];
+           
             $_SESSION['email'] = $user['email'];
            
             header('Location: ./index.php');
@@ -45,8 +45,9 @@ if (isset($_POST['submit'])) {
             goto show_form;
         }
     }
-   
+    header('Location: ./index.php');
 }
-echo "****************************".$_SESSION['user']['email'];
+
 show_form:
+    
 ?>

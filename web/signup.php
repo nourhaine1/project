@@ -40,10 +40,21 @@ if (isset($_POST['submit'])) {
             }
 
         
+// check my  database
+$stmt = $conn->prepare("SELECT id FROM client" );
+$stmt->execute();
+$users = $stmt->fetchAll();
+$sql = "SELECT * FROM client WHERE email = :email";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'email' => $email,
+    ]);
+    $user = $stmt->fetch();
 
 // to my database
 
    if($errorMSG=" "){
+     
     $sql = "INSERT INTO client (email, name, password, ageEnfant,ville) VALUES (?, ?, ?, ?, ?)";
     $query = $pdo->prepare($sql);
     $query->execute([$email, $name, $password, $age,$ville]);
