@@ -1,57 +1,45 @@
 <?php
 session_start();
-include './db.php';
-
 if (isset($_SESSION['user'])) {
-    header('Location: ./index.html');
+    header('Location: index.php');
     exit();
 }
 
-$errorMSG = "";
-if (isset($_POST['submit'])){
-        if (empty($_POST["email"])) {
-            $errorMSG = "Email is required ";
-        } else {
-            $email = $_POST["email"];
-         
-        }
+include './db.php';
 
-        if (empty($_POST["name"])) {
-            $errorMSG = "Name is required ";
-        } else {
-            $name = $_POST["name"];
-           
-        }
-        if (empty($_POST["ville"])) {
-            $errorMSG = "ville is required ";
-        } else {
-            $ville = $_POST["ville"];
-         
-        }
+$errors = [];
 
+if (isset($_POST['submit'])) {
+    extract($_POST);
 
-        if (empty($_POST["password"])) {
-            $errorMSG = "Password is required ";
-        } else {
-            $password = $_POST["password"];
-           
-            if (empty($_POST["age"])) {
-                $errorMSG = "age is required ";
-            } else {
-                $age = $_POST["age"];
-                
-            }
-        }
+    if (strlen(trim($name)) < 3) {
+        $errors[0] = 'Username must be at least 3 characters';
+        goto show_form;
+    }
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
+        $errors[0] = 'Please enter a valid email';
+        goto show_form;
+    }
+    if (strlen($password) < 6) {
+        $errors[0] = 'Password must be at least 6 characters';
+      
+        goto show_form;
+    }
+    if (strlen($ville) < 0) {
+        $errors[0] = 'invalid ville';
+        goto show_form;
+    }
+    if (empty($age)) {
+        $errors[0] = 'please fill the age ';
+        goto show_form;
+    }
 
-            if (empty($_POST["terms"])) {
-                $errorMSG = "Terms is required ";
-            } else {
-                $terms = $_POST["terms"];
-                
+            if (empty("terms")) {
+                $errors[0] = 'please fill the age ';
+                goto show_form;
             }
 
-        $user=array($email,$password,$name,$age,$ville);
-        $_SESSION['user']=($user);
+        
         var_dump  ($_SESSION['user']);
 // to my database
 
@@ -59,10 +47,11 @@ if (isset($_POST['submit'])){
     $sql = "INSERT INTO client (email, name, password, ageEnfant,ville) VALUES (?, ?, ?, ?, ?)";
     $query = $pdo->prepare($sql);
     $query->execute([$email, $name, $password, $age,$ville]);
-    header('Location: ./index.html');
+   // header('Location: ./index.php');
    }
 
     
 
 }
+show_form:
 ?>

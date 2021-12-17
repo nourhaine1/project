@@ -1,3 +1,11 @@
+<?php
+
+
+include './db.php';
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +97,7 @@
 
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="log-in.php">LOG IN</a>
+ <?=(isset($_SESSION['user'])) ? '  <a class="btn-outline-sm" href="log-in.php" > '(isset($_SESSION['user']['name'])).' </a> ': 'LOGIN IN '; ?> 
                 </span>
             </div>
         </div> <!-- end of container -->

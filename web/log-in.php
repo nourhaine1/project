@@ -42,7 +42,9 @@
         </div>
     </div>
     <!-- end of preloader -->
-    
+    <?php
+    include'./login.php';
+    ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -64,7 +66,7 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#header">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="index.php#header">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="index.html#features">FEATURES</a>
@@ -107,25 +109,38 @@
                     <h1>Log In</h1>
                    <p>You don't have a password? Then please <a class="white" href="sign-up.html">Sign Up</a></p> 
                     <!-- Sign Up Form -->
+                    <?php if (count($errors) > 0) : ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?= $errors[0] ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php endif; ?>
                     <div class="form-container">
-                        <form id="logInForm" data-toggle="validator" data-focus="false">
+                        <form   action="login.php"  method="post" data-toggle="validator" data-focus="false" >
+                    
                             <div class="form-group">
-                                <input type="email" class="form-control-input" id="lemail" required>
+                                <input name="email" type="email" class="form-control-input" id="lemail" required>
                                 <label class="label-control" for="lemail">Email</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control-input" id="lpassword" required>
+                                <input type="text"  name="password" class="form-control-input" id="lpassword" required>
                                 <label class="label-control" for="lpassword">Password</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">LOG IN</button>
+                                <button  name="submit" type="submit" class="form-control-submit-button">LOG IN</button>
                             </div>
                             <div class="form-message">
                                 <div id="lmsgSubmit" class="h3 text-center hidden"></div>
                             </div>
                         </form>
+                        <?php if (count($errors) > 0) : ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?= $errors[0] ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php endif; ?>
                     </div> <!-- end of form container -->
                     <!-- end of sign up form -->
 
