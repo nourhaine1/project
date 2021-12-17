@@ -7,6 +7,7 @@ if (isset($_SESSION['user'])) {
     exit();
 }
 
+
 $errors = [];
 
 if (isset($_POST['submit'])) {
