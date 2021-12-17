@@ -40,14 +40,14 @@ if (isset($_POST['submit'])) {
             }
 
         
-        var_dump  ($_SESSION['user']);
+
 // to my database
 
    if($errorMSG=" "){
     $sql = "INSERT INTO client (email, name, password, ageEnfant,ville) VALUES (?, ?, ?, ?, ?)";
     $query = $pdo->prepare($sql);
     $query->execute([$email, $name, $password, $age,$ville]);
-   // header('Location: ./index.php');
+  header('Location: ./index.php');
    }
 
     

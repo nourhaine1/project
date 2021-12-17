@@ -97,7 +97,7 @@ session_start();
 
                 </ul>
                 <span class="nav-item">
- <?=(isset($_SESSION['user'])) ? '  <a class="btn-outline-sm" href="log-in.php" > '(isset($_SESSION['user']['name'])).' </a> ': 'LOGIN IN '; ?> 
+   <a class="btn-outline-sm" href="log-in.php" > LOGIN IN </a> 
                 </span>
             </div>
         </div> <!-- end of container -->

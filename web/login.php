@@ -2,10 +2,11 @@
 include './db.php';
 include'./functions.php';
 session_start();
-if (isset($_SESSION['user'])) {
+/*if (isset($_SESSION['user'])) {
     header('Location: ./index.php');
     exit();
 }
+*/
 
 
 $errors = [];
@@ -44,6 +45,8 @@ if (isset($_POST['submit'])) {
             goto show_form;
         }
     }
+   
 }
+echo "****************************".$_SESSION['user']['email'];
 show_form:
 ?>
