@@ -61,7 +61,7 @@ session_start();
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/IEEE BLEU.png.pdf" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/wie.png" alt="alternative"></a> 
             
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@ session_start();
                         <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#features">FEATURES</a>
+                        <a class="nav-link page-scroll" href="#features">Symthomes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#details">DETAILS</a>
@@ -86,11 +86,11 @@ session_start();
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle page-scroll" href="#video" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEO</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="article-details.html"><span class="item-text">Films</span></a>
+                            <a class="dropdown-item" href="films.php"><span class="item-text">Films</span></a>
                             <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Videos</span></a>
+                            <a class="dropdown-item" href="videos.php"><span class="item-text">Videos</span></a>
                             <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
+                            <a class="dropdown-item" href="jeux.php"><span class="item-text">Jeux</span></a>
                         </div>
                     </li>
                     <!-- end of dropdown menu -->
@@ -115,7 +115,7 @@ session_start();
                             <h1>2 Avril 
                                 C'est notre fete</h1>
                             <p class="p-large">Le comportement c’est la communication. Changez l’environnement et les comportements changeront.</p>
-                            <a class="btn-solid-lg page-scroll" href="register.php">SIGN UP</a>
+                            <a class="btn-solid-lg page-scroll" href="./signup.php">SIGN UP</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6 col-xl-7">

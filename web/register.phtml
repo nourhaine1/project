@@ -68,28 +68,15 @@
                         <a class="nav-link page-scroll" href="index.php#header">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#features">FEATURES</a>
+                        <a class="nav-link page-scroll" href="index.php#features">FEATURES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#details">DETAILS</a>
+                        <a class="nav-link page-scroll" href="index.php#details">DETAILS</a>
                     </li>
 
-                    <!-- Dropdown Menu -->          
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle page-scroll" href="index.html#video" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEO</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="article-details.html"><span class="item-text">ARTICLE DETAILS</span></a>
-                            <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
-                            <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
-                        </div>
-                    </li>
+                    
                     <!-- end of dropdown menu -->
 
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#pricing">PRICING</a>
-                    </li>
                 </ul>
                 <span class="nav-item">
                     <a class="btn-outline-sm" href="log-in.html">LOG IN</a>
@@ -106,10 +93,16 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Sign Up</h1>
-                   <p>Fill out the form below to sign up for Tivo. Already signed up? Then just <a class="white" href="log-in.html">Log In</a></p> 
+                   <p>Inscrivez-vous maintenant!! <a class="white" href="log-in.html">Log In</a></p> 
                     <!-- Sign Up Form -->
+                    <?php if (count($errors) > 0) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?= $errors[0] ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
                     <div class="form-container">
-                        <form  action="signup.php"  data-toggle="validator" data-focus="false" method="post">
+                        <form  action="<?php $_SERVER['PHP_SELF'] ?>"  data-toggle="validator" data-focus="false" method="post">
                             <div class="form-group">
                                 <input type="email" class="form-control-input" id="semail" name="email" required>
                                 <label class="label-control" for="semail">Email</label>
@@ -130,11 +123,10 @@
                                 <label class="label-control" for="spassword">Password</label>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="form-group">
-                                <input   name="age" type="text" class="form-control-input" id="sage" required>
-                                <label class="label-control" for="spassword">Age of Child</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
+                              <div class="input-group mb-3">
+                                    <label class="input-group-text" for="inputGroupFile01">Image</label>
+                                    <input type="file" name="avatar"  class="form-control" id="inputGroupFile01">
+                                </div>
                             <div class="form-group checkbox">
                                 <input type="checkbox" name="terms" id="sterms" value="Agreed-to-Terms" required>I agree with Tivo's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
                                 <div class="help-block with-errors"></div>
