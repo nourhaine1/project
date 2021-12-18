@@ -95,7 +95,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Log In</h1>
-                   <p>vous n'avez pas de compte ?<a class="white" href="sign-up.html">s'inscrire</a></p> 
+                   <p>vous n'avez pas de compte ?<a class="white" href="register.php">s'inscrire</a></p> 
                     <!-- Sign Up Form -->
                     <?php if (count($errors)>0) : ?>
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -104,7 +104,7 @@
         </div>
         <?php endif; ?>
                     <div class="form-container">
-                        <form   action="<?php $_SERVER['PHP_SELF'] ?>"  method="post" data-toggle="validator" data-focus="false" >
+                        <form  action="<?php $_SERVER['PHP_SELF'] ?>"  method="post" data-toggle="validator" data-focus="false" >
                         
                        
                             <div class="form-group">

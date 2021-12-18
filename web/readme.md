@@ -16,10 +16,11 @@ CRUD
 
 
 
-lezmni nahi el child age men form cbon
-nzid form input fi form mt3 photoo cbon
-nzid avatar fi base de donnes cbon
+
 ki naamel sign up yjinii el avatar w fama drop down fyha name w logout+icon
+account modification client 
+ki yodkhol lel film wela video wela jeu yaamel sign up 
+espace admin 
 mot de passe oubliee w php mailer
 video sort 
 

@@ -1,9 +1,10 @@
 <?php
-include './db.php';
-include'./functions.php';
+
+include '../db.php';
+include'../functions.php';
 session_start();
 if (isset($_SESSION['user'])) {
-    header('Location: ./index.php');
+    header('Location: ../index.php');
     exit();
 }
 
@@ -11,44 +12,45 @@ if (isset($_SESSION['user'])) {
 
 $errors = [];
 
-if (isset($_POST['submit'])&& isset($_POST['email'])&& isset($_POST['password'])) {
+if (isset($_POST['submit'])&& isset($_POST['adminEmail'])&& isset($_POST['adminPass'])) {
    
     extract($_POST);
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+    if (!filter_var($adminEmail, FILTER_VALIDATE_EMAIL) ) {
         $errors[0] = 'Please enter a valid email';
         goto show_form;
     }
 
-    if (strlen($password) <6) {
+    if (strlen($adminPass) <6) {
         $errors[0] = 'Password invalid';
         goto show_form;
     }
-    $sql = "SELECT * FROM client WHERE email = :email";
+    $sql = "SELECT * FROM admin WHERE email = :email";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-        'email' => $email,
+        'email' => $adminEmail,
     ]);
     $user = $stmt->fetch();
     if ($user == false) {
         $errors[0] = 'Wrong email or password';
         goto show_form;
     } else {
-            if ($password== $user['password']) {
+            if ($adminPass== $user['password']) {
             $_SESSION['id'] = $user['id'];
             $_SESSION['avatar'] = $user['avatar'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['name']= $user['name'];
             echo 'Welcome ' . $_SESSION['name'] . '!';
-            header('Location: ./index.php');
+           header('location:../admin.php');
         } else {
             $errors[0] = 'Wrong email or password';
             goto show_form;
         }
     }
-    header('Location: ./index.php');
+    
 }
 
 show_form:
    
 ?>
+

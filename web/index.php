@@ -97,7 +97,7 @@ session_start();
 
                 </ul>
                 <span class="nav-item">
-   <a class="btn-outline-sm" href="log-in.php" > LOGIN IN </a> 
+   <a class="btn-outline-sm" href="log-in.php" >  <?=(isset($_SESSION['user'])?  $_SESSION['name'] :'') ?>LOGIN IN </a> 
                 </span>
             </div>
         </div> <!-- end of container -->
@@ -763,8 +763,8 @@ session_start();
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col first">
-                        <h4>About Tivo</h4>
-                        <p class="p-small">We're passionate about designing and developing one of the best marketing apps in the market</p>
+                        <h4>Administration</h4>
+                       <a href="./admin/connectAdmin.phtml"> Espace Admin </a>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
