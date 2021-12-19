@@ -94,7 +94,9 @@ session_start();
                         </div>
                     </li>
                     <!-- end of dropdown menu -->
-
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#newsletter">Contact</a>
+                    </li>
                 </ul>
                 <span class="nav-item">
    <a class="btn-outline-sm" href="log-in.php" >  <?=(isset($_SESSION['user'])?  $_SESSION['name'] :'') ?>LOGIN IN </a> 
@@ -489,119 +491,6 @@ session_start();
     <!-- end of video -->
 
 
-    <!-- Pricing 
-    <div id="pricing" class="cards-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="above-heading">PRICING</div>
-                    <h2 class="h2-heading">Pricing Options Table</h2>
-                </div> <!-- end of col 
-            </div> <!-- end of row 
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card-
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">BASIC</div>
-                            <div class="price"><span class="currency">$</span><span class="value">Free</span></div>
-                            <div class="frequency">14 days trial</div>
-                            <div class="divider"></div>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Email Marketing Module</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">User Control Management</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">List Building And Cleaning</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">Collected Data Reports</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">Planning And Evaluation</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card 
-
-                    <!-- Card
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">ADVANCED</div>
-                            <div class="price"><span class="currency">$</span><span class="value">29.99</span></div>
-                            <div class="frequency">monthly</div>
-                            <div class="divider"></div>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Email Marketing Module</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">User Control Management</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">List Building And Cleaning</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">Collected Data Reports</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">Planning And Evaluation</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
-                    <!-- Card
-                    <div class="card">
-                        <!--<div class="label">
-                            <p class="best-value">Best Value</p>
-                        </div> 
-                        <div class="card-body">
-                            <div class="card-title">COMPLETE</div>
-                            <div class="price"><span class="currency">$</span><span class="value">39.99</span></div>
-                            <div class="frequency">monthly</div>
-                            <div class="divider"></div>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Email Marketing Module</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">User Control Management</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">List Building And Cleaning</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Collected Data Reports</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Planning And Evaluation</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card 
-
-                </div> <!-- end of col 
-            </div> <!-- end of row 
-        </div> <!-- end of container 
-    </div> <!-- end of cards-2 -->
-    <!-- end of pricing -->
 
 
     <!-- Testimonials -->
@@ -687,13 +576,13 @@ session_start();
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <div class="above-heading">NEWSLETTER</div>
-                        <h2>Stay Updated With The Latest News To Get More Qualified Leads</h2>
+                        <div class="above-heading">Contacter-nous</div>
+                        <h2>Remplissez le formulaire! </h2>
 
                         <!-- Newsletter Form -->
                         <form id="newsletterForm" data-toggle="validator" data-focus="false">
                             <div class="form-group">
-                                <input type="email" class="form-control-input" id="nemail" required>
+                                <input type="email" name="email" class="form-control-input" id="nemail" required>
                                 <label class="label-control" for="nemail">Email</label>
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -764,7 +653,13 @@ session_start();
                 <div class="col-md-4">
                     <div class="footer-col first">
                         <h4>Administration</h4>
-                       <a href="./admin/connectAdmin.phtml"> Espace Admin </a>
+                        <ul class="list-unstyled li-space-lg p-small">
+                        <li class="media">
+                        <i class="fas fa-square"></i>
+
+                        <div class="media-body"> <a class="white"  href="./admin/connectAdmin.phtml"> Espace Admin </a> </div>
+                        </li>
+                        </ul>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">

@@ -3,10 +3,6 @@
 include '../db.php';
 include'../functions.php';
 session_start();
-if (isset($_SESSION['user'])) {
-    header('Location: ../index.php');
-    exit();
-}
 
 
 
@@ -40,8 +36,12 @@ if (isset($_POST['submit'])&& isset($_POST['adminEmail'])&& isset($_POST['adminP
             $_SESSION['avatar'] = $user['avatar'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['name']= $user['name'];
-            echo 'Welcome ' . $_SESSION['name'] . '!';
-           header('location:../admin.php');
+            $_SESSION['desc']= $user['description'];
+            $_SESSION['pass']= $user['password'];
+
+            echo '----------Welcome ' . $_SESSION['name'] . $_SESSION['desc'] .'!';
+         header('location:../admin.php');
+         
         } else {
             $errors[0] = 'Wrong email or password';
             goto show_form;

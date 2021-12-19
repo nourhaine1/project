@@ -8221,13 +8221,13 @@ textarea.form-control {
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #fb8691 !important;
-    border: 1px solid #fb8691 !important;
+    background: #5f4dee !important;
+    border: 1px solid #5f4dee !important;
     color: #fff !important; }
     .btn.btn-primary:hover {
-      border: 1px solid #fb8691;
+      border: 1px solid #8879ff;
       background: transparent;
-      color: #fb8691; }
+      color: #8879ff; }
     .btn.btn-primary.btn-outline-primary {
       border: 1px solid #fb8691;
       background: transparent;
