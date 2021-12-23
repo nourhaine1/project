@@ -1,3 +1,13 @@
+<?
+include './login.php';
+            if (empty ($_SESSION['id'])){
+                header('location:./index.php');
+                exit ();
+            }
+                 
+?>
+
+
 <!DOCTYPE php>
 <php lang="en">
 <head>
@@ -89,8 +99,17 @@
                    
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="log-in.php">LOG IN</a>
-                </span>
+                <? if (!empty ($_SESSION['id'])):?>
+                    <li class="nav-item dropdown">
+                    <img src="./images/<?= $_SESSION['avatar'] ?>" alt="mdo" width="32" height="32" class="rounded-circle">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="admin/compte.php"> <?= $_SESSION['name'] ?></a>
+                       
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="logout.php">se deconnecter</a>
+                        </div>
+                    </li>
+                    <? endif; ?>
             </div>
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->

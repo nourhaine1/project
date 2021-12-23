@@ -2144,3 +2144,7 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+.dark-mode{
+	background-color: #333;
+	color:white
+}

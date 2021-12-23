@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include './addVideo.php';
 ?>
 
 
@@ -35,7 +35,7 @@ session_start();
 	<link href="css/styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -109,9 +109,7 @@ session_start();
                         </div>
                     </li>
                     </ul>
-                    <? else:?>
-                        <a class="btn-outline-sm" href="log-in.php" > Se connecter </a>
-                </span>
+                  
             </div>
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
@@ -131,24 +129,102 @@ session_start();
     </header> <!-- end of ex-header -->
     <!-- end of header -->
     
-
-
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
+    <div class="slider-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                    </div> <!-- end of breadcrumbs -->
+                    
+                    <!-- Image Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container image-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                       
+      <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addVideo">
+      <i class="bi bi-plus-circle-fill"></i>Ajouter un video </button>       
+                                    </div>
+                                <div class="swiper-slide">
+                                <a  class="dropdown-item" href="addVideo.php"><i class="bi bi-trash-fill"></i>Supprimer  un video  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                <a  class="dropdown-item" href="addVideo.php"><i class="bi bi-plus-circle-fill"></i>Ajouter un Film </a>
+                                </div>
+                                <div class="swiper-slide">
+                                <a  class="dropdown-item" href="addVideo.php"><i class="bi bi-trash-fill"></i>Supprimer un Film </a>
+                                </div>
+                                <div class="swiper-slide">
+                                <a  class="dropdown-item" href="addVideo.php"><i class="bi bi-plus-circle-fill"></i>Ajouter un jeu </a>
+                                </div>
+                                <div class="swiper-slide">
+                                <a  class="dropdown-item" href="addVideo.php"><i class="bi bi-trash-fill"></i>Supprimer un jeu </a>
+                                </div>
+                            </div> <!-- end of swiper-wrapper -->
+                        </div> <!-- end of swiper container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of image slider -->
+
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -
+    </div> <!-- end of slider-1 -->
+    <!-- end of customers -->
+
+   
+<!-- Modal -->
+<div class="modal fade" id="addVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter un video</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form action="addVideo.php" method ="post">
+          
+            
+             <div class="form-floating">
+             <input name="nameVid" type="text"  required  class="form-control <?= array_key_exists('name', $errors) ? 'is-invalid' : '' ?>" id="floatingName" >
+             <small class="text-danger"><?= array_key_exists('name', $errors) ? $errors['name'] : '' ?></small>
+             <label for="floatingName">Nom de Video</label>
+            </div>
+            
+            <br>
+            <div class="form-floating">
+                    <textarea name="descVid" class="form-control" value="" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Description De video</label>
+            </div>
+            <br>
+            <input name="Vid" type="text"  required  class="form-control">
+             
+             <label for="floatingName">chemin de Video (juste nom)</label>
+           
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+  <option selected name="ageVid">Selectionner l'age correspond au l'enfant</option>
+  <option name="2">2 </option>
+  <option name="3">3</option>
+  <option name="4">4</option>
+  <option name="5">5 </option>
+  <option name="6">6</option>
+  <option name="7">7</option>
+  <option name="8">8</option>
+  <option name="9">9</option>
+  <option name="10">+10</option>
+</select>
+            
+      </div>
+      
+      <div class="modal-footer">
+        <button  name="close" type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button  name="aadVideo" type="submit" class="btn btn-primary" data-bs-dismiss="modal">ajouter</button>
+       
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     
 
-    ->
-    <!-- end of breadcrumbs -->
+
  
      
     
@@ -169,53 +245,11 @@ session_start();
                         <p>When you first register for a Tivo account, and when you use the Services, we collect some <a class="blue" href="#your-link">Personal Information</a> about you such as:</p>
                         <div class="row">
                             <div class="col-md-6">
-                                <ul class="list-unstyled li-space-lg indent">
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">The geographic area where you use your computer and mobile devices should be the same with the one of your software</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Your full name, username, and email address and other contact details should be provided in the contact forms</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">A unique Tivo user ID (an alphanumeric string) which is assigned to you upon registration should always be at front</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Every system is backuped regularly and it will not fail</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Your IP Address and, when applicable, timestamp related to your consent and confirmation of consent but please make sure it does</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Other information submitted by you or your organizational representatives via various methods and practiced techniques</div>
-                                    </li>
-                                </ul>
+                               
                             </div> <!-- end of col -->
 
                             <div class="col-md-6">
-                                <ul class="list-unstyled li-space-lg indent">
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Your billing address and any necessary other information to complete any financial transaction, and when making purchases through the Services, we may also collect your credit card or PayPal information or any other sensitive data that you consider</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">User generated content (such as messages, posts, comments, pages, profiles, images, feeds or communications exchanged on the Supported Platforms that can be used)</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Images or other files that you may publish via our Services</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Information (such as messages, posts, comments, pages, profiles, images) we may receive relating to communications you send us, such as queries or comments concerning</div>
-                                    </li>
-                                </ul>
+                                
                             </div> <!-- end of col -->
                         </div> <!-- end of row -->
                     </div> <!-- end of text-container-->
@@ -296,7 +330,7 @@ session_start();
 
                         </div> <!-- end of col--> 
                     </div> <!-- end of row -->
-                    <a class="btn-outline-reg" href="index.html">BACK</a>
+                    <a class="btn-outline-reg" href="logout.php">BACK</a>
                 </div> <!-- end of col-->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -388,5 +422,7 @@ session_start();
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>

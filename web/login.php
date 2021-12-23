@@ -40,6 +40,7 @@ if (isset($_POST['submit'])&& isset($_POST['email'])&& isset($_POST['password'])
             $_SESSION['email'] = $user['email'];
             $_SESSION['name']= $user['name'];
             echo 'Welcome ' . $_SESSION['name'] . '!';
+          //  die();
             header('Location: ./index.php');
         } else {
             $errors[0] = 'Wrong email or password';

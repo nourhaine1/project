@@ -1,8 +1,8 @@
 <?php
 
 
-include './db.php';
-session_start();
+include './login.php';
+ 
 ?>
 
 
@@ -62,7 +62,6 @@ session_start();
 
             <!-- Image Logo -->
             <a class="navbar-brand logo-image" href="index.html"><img src="images/wie.png" alt="alternative"></a> 
-            
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-awesome fas fa-bars"></span>
@@ -94,13 +93,32 @@ session_start();
                         </div>
                     </li>
                     <!-- end of dropdown menu -->
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#newsletter">Contact</a>
-                    </li>
+                  
                 </ul>
+                <? if (!empty ($_SESSION['id'])):?>
                 <span class="nav-item">
-   <a class="btn-outline-sm" href="log-in.php" >  <?=(isset($_SESSION['user'])?  $_SESSION['name'] :'') ?>LOGIN IN </a> 
-                </span>
+            
+                
+                    <li class="nav-item dropdown">
+                        <img src="./images/<?= $_SESSION['avatar'] ?>" alt="mdo" width="32" height="32" class="rounded-circle">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="compte.php"> <?= $_SESSION['name'] ?></a>
+                       
+                                <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="logout.php">se deconnecter</a>
+                        </div>
+                    </li>
+                    <? endif;?>
+           
+                    
+                 </span>
+                 <li class="nav-item">
+          
+                    
+                    <span id="google_translate_element" class="nav-item"> </span>
+                 </li>
+           
+          
             </div>
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
@@ -118,7 +136,18 @@ session_start();
                                 C'est notre fete</h1>
                             <p class="p-large">Le comportement c’est la communication. Changez l’environnement et les comportements changeront.</p>
                             <a class="btn-solid-lg page-scroll" href="./signup.php">SIGN UP</a>
-                        </div> <!-- end of text-container -->
+                            
+                        </div> 
+                         <br><!-- end of text-container -->
+                        <span class="nav-item">
+                <a href="javascript:enableMute()"> <img id="musicimg"class="megaimg" src="images/megaphone.png" alt="mute/unmute"> </a>
+  
+  <audio id="aud"  controls loop autoplay hidden >
+    
+    <source src="images\relax.mp3" type="audio/mpeg">
+  
+  </audio>
+                </span>
                     </div> <!-- end of col -->
                     <div class="col-lg-6 col-xl-7">
                         <div class="image-container">
@@ -571,37 +600,44 @@ session_start();
 
 
     <!-- Newsletter -->
-    <div class="form">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <div class="above-heading">Contacter-nous</div>
-                        <h2>Remplissez le formulaire! </h2>
+  
 
-                        <!-- Newsletter Form -->
-                        <form id="newsletterForm" data-toggle="validator" data-focus="false">
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control-input" id="nemail" required>
-                                <label class="label-control" for="nemail">Email</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group checkbox">
-                                <input type="checkbox" id="nterms" value="Agreed-to-Terms" required>I've read and agree to Tivo's written <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">SUBSCRIBE</button>
-                            </div>
-                            <div class="form-message">
-                                <div id="nmsgSubmit" class="h3 text-center hidden"></div>
-                            </div>
-                        </form>
-                        <!-- end of newsletter form -->
+                            <!-- Privacy Form -->
+                            <h2>Remplissez cette formulaire !</h2>
+                            <div class="form-container">
+                                <form id="privacyForm" data-toggle="validator" data-focus="false">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control-input" id="pname" required>
+                                        <label class="label-control" for="pname">Name</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control-input" id="pemail" required>
+                                        <label class="label-control" for="pemail">Email</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control-select" id="pselect" required>
+                                            <option class="select-option" value="" disabled selected>Select Option</option>
+                                            <option class="select-option" value="Delete data">Delete my data</option>
+                                            <option class="select-option" value="Show me data">Show me my data</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group checkbox">
+                                        <input type="checkbox" id="pterms" value="Agreed-to-Terms" required>I have read and agree to Tivo's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="form-control-submit-button">SUBMIT</button>
+                                    </div>
+                                    <div class="form-message">
+                                        <div id="pmsgSubmit" class="h3 text-center hidden"></div>
+                                    </div>
+                                </form>
+                            </div> <!-- end of form container -->
+                            <!-- end of privacy form -->
 
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="icon-container">
@@ -683,7 +719,7 @@ session_start();
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
+                                <div class="media-body">ISET BIZERTE</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
@@ -703,7 +739,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p>
+                    <p class="p-small">Copyright © 2022 <a href="https://inovatik.com">IEEE ISET BIZERTE</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
@@ -720,5 +756,13 @@ session_start();
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/music.js"></script>
+    <script src="js/traduction.js"></script>
+    <script src="js/mode.js"></script>
+    <script src="js/timer.js"></script>
+
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

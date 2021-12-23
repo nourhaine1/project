@@ -45,8 +45,8 @@ if (isset($_POST['submit'])) {
 
 // to my database
 
-   if($errorMSG=" "){
-     
+   if(empty ($errors)){
+     $_SESSION['name']=$name;
     $sql = "INSERT INTO client (email, name, password,ville,avatar) VALUES (?, ?, ?, ?, ?)";
     $query = $pdo->prepare($sql);
     $query->execute([$email, $name, $password, $ville,$avatar]);

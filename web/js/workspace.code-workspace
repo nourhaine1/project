@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\Food1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Tivocom"
+	}
+}
