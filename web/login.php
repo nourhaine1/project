@@ -39,6 +39,8 @@ if (isset($_POST['submit'])&& isset($_POST['email'])&& isset($_POST['password'])
             $_SESSION['avatar'] = $user['avatar'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['name']= $user['name'];
+            $_SESSION['ville']= $user['ville'];
+           $_SESSION['passC']= $user['password'];
             echo 'Welcome ' . $_SESSION['name'] . '!';
           //  die();
             header('Location: ./index.php');

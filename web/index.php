@@ -102,7 +102,7 @@ include './login.php';
                     <li class="nav-item dropdown">
                         <img src="./images/<?= $_SESSION['avatar'] ?>" alt="mdo" width="32" height="32" class="rounded-circle">
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="compte.php"> <?= $_SESSION['name'] ?></a>
+                            <a class="dropdown-item" href="./compteClient.php"> <?= $_SESSION['name'] ?></a>
                        
                                 <div class="dropdown-items-divide-hr"></div>
                             <a class="dropdown-item" href="logout.php">se deconnecter</a>
