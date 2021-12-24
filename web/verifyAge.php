@@ -9,7 +9,7 @@ exit();
     }
 
 $stmt = $pdo->prepare("SELECT * FROM `video` WHERE `age` = :age");
-$stmt->execute(["%".$_POST["submit"]."%", "%".$_POST["submit"]."%"]);
+$stmt->execute();
 $results = $stmt->fetchAll();
 
 }
