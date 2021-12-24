@@ -4,7 +4,6 @@ if (!isset($_SESSION['name'])) {
     header('Location: ./log-in.php');
     exit();
 }
-echo $_SESSION['id'];
 ?>
 
 <!DOCTYPE html>
@@ -97,9 +96,7 @@ echo $_SESSION['id'];
 
                     
                 </ul>
-                <span class="nav-item">
-                    <a class="btn-outline-sm" href="log-in.php">LOG IN</a>
-                </span>
+                
             </div>
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
@@ -142,20 +139,36 @@ echo $_SESSION['id'];
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Veuillez indiquer l'age de votre enfant </h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Veuillez indiquez l'age de votre enfant </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+      <div class="col">
+          <form method="post" action="<?= $_SERVER['PHP_SELF']?>" data-toggle="validator" >
+            <input  name ="ageSasie" type="text" class="form-control" placeholder="age" aria-label="First name">
+  </div>
+
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button name="submit" type="submit" class="btn btn-primary">Chercher</button>
+</form>
       </div>
     </div>
   </div>
 </div>
+<?php
+if (isset($_POST["search"])) {
+      // (B1) SEARCH FOR USERS
+      require "verifyAge.php";
 
+      // (B2) DISPLAY RESULTS
+      if (count($results) > 0) { foreach ($results as $r) {
+        printf("<div>%s - %s</div>", $r["name"], $r["email"]);
+      }} else { echo "No results found"; }
+      ?>
     <!-- Terms Content -->
     <div class="ex-basic-2">
         <div class="container">
@@ -164,20 +177,21 @@ echo $_SESSION['id'];
                     <div class="text-container">
                         
                         <div class="card-group">
-                                        <?php
-                                    include './db.php';
-                                    $query = $pdo->prepare("SELECT * FROM video");
-                                    $query->execute();
-                                    $videos = $query->fetchAll();
-                                    foreach ($videos as $video) :
+                                        
+                        <?php   
+                        require 'verifyAge.php';
+                        $errors=[];
+                      
+                                          foreach ($videos as $video) :
                                     ?>
                                             <div class="card">
                                         <div class="card-body">
+                                            here here
                                                 <h2 class="card-title"><?=$video['name']?></h2>
                                                     <p class="card-text">
                                                      <video width="800" height="800" controls>
-                                                                                <source src="./images/<?= $video['path']?>" type=video/ogg>
-                                                                                      <source src="./images/<?= $video['path']?>" type=video/mp4>
+                                                                     <source src="./images/<?= $video['path']?>" type=video/ogg>
+                                                                      <source src="./images/<?= $video['path']?>" type=video/mp4>
                                                     </video>
                                                     </p>
                                             </div>
@@ -191,7 +205,18 @@ echo $_SESSION['id'];
                         
                                     </div>
                             
-                                    <?php endforeach;?>               
+                                 <?php
+                                 endforeach;
+                               
+                                
+                               
+                                 ?>  
+                                   
+                                   <?php
+                                 };
+                               
+                                 ?> 
+                                            
                      </div>
                  </div>
              </div>
@@ -288,5 +313,11 @@ echo $_SESSION['id'];
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
     <script src="js/timer.js"></script>
+    <script>
+        
+             $(document).ready(function(){
+        $("#search").modal('show');
+                });
+</script>
 </body>
 </html>

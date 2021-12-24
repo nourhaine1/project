@@ -9,6 +9,7 @@ if (isset($_SESSION['user'])) {
 
 
 
+
 $errors = [];
 
 if (isset($_POST['submit'])&& isset($_POST['email'])&& isset($_POST['password'])) {
@@ -40,8 +41,8 @@ if (isset($_POST['submit'])&& isset($_POST['email'])&& isset($_POST['password'])
             $_SESSION['email'] = $user['email'];
             $_SESSION['name']= $user['name'];
             $_SESSION['ville']= $user['ville'];
-           $_SESSION['passC']= $user['password'];
-            echo 'Welcome ' . $_SESSION['name'] . '!';
+          
+            echo 'Welcome ' . $_SESSION['ville'] . '!';
           //  die();
             header('Location: ./index.php');
         } else {
@@ -49,7 +50,7 @@ if (isset($_POST['submit'])&& isset($_POST['email'])&& isset($_POST['password'])
             goto show_form;
         }
     }
-    header('Location: ./index.php');
+ header('Location: ./index.php');
 }
 
 show_form:

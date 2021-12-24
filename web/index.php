@@ -1,8 +1,6 @@
 <?php
+session_start();
 
-
-include './login.php';
- 
 ?>
 
 
@@ -61,7 +59,7 @@ include './login.php';
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/wie.png" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="https://www.facebook.com/IEEE-WIE-ISET-Bizerte-Student-Affinity-Group-291427792673546"><img width="120px;" height="120px;" class="logo-image" src="images/wie.png" alt="alternative"></a> 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-awesome fas fa-bars"></span>
@@ -95,20 +93,17 @@ include './login.php';
                     <!-- end of dropdown menu -->
                   
                 </ul>
-                <? if (!empty ($_SESSION['id'])):?>
                 <span class="nav-item">
-            
-                
-                    <li class="nav-item dropdown">
-                        <img src="./images/<?= $_SESSION['avatar'] ?>" alt="mdo" width="32" height="32" class="rounded-circle">
+                <?=(isset ($_SESSION['id'])) ?  '<li class="nav-item dropdown"> 
+                        
+                        <img  class="rounded-circle" src="./images/<?=$_SESSION["avatar"] ?>" >  
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./compteClient.php"> <?= $_SESSION['name'] ?></a>
+                            <a class="dropdown-item" href="./compteClient.php"> <?=$_SESSION["name"] ?></a>
                        
                                 <div class="dropdown-items-divide-hr"></div>
                             <a class="dropdown-item" href="logout.php">se deconnecter</a>
                         </div>
-                    </li>
-                    <? endif;?>
+                    </li> ': ' <li class="nav-item "><a class="btn-outline-sm" href="./log-in.php"> Se connecter </a> </li>' ?>
            
                     
                  </span>
@@ -317,7 +312,7 @@ include './login.php';
                                                 <div class="media-body">L’enfant commence à parler plus tard que 2 ans.</div>
                                             </li>
                                         </ul>
-                                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a>
+                                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">Prise en charge</a>
                                     </div> <!-- end of text-container -->
                                 </div> <!-- end of col -->
                             </div> <!-- end of row -->
@@ -340,35 +335,30 @@ include './login.php';
                 <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
                 <div class="col-lg-8">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/details-lightbox.png" alt="alternative">
+                        <img class="img-fluid" src="images/enfant.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
-                    <h3>List Building</h3>
+                    <h3>Prise en charge d'un enfant autiste</h3>
                     <hr>
-                    <h5>Core service</h5>
-                    <p>It's very easy to start using Tivo. You just need to fill out and submit the Sign Up Form and you will receive access to the app.</p>
+                    <h5>Les Techniques (3)</h5>
+                    <p>Pour prendre en charge l'autisme au quotidien et intervenir intensivement sur les symptômes associés, afin d'aider l'enfant à progresser et à acquérir de nombreuses capacités. Pour ce faire il existe différentes méthodes:</p>
                     <ul class="list-unstyled li-space-lg">
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">List building framework</div>
+                            <i class="fas fa-square"></i><div class="media-body">
+                                La methode de 3i:Est basée sur le jeu et stimule la communication avec des activités  et  un environnement calme.
+
+                            </div>
                         </li>
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Easy database browsing</div>
+                            <i class="fas fa-square"></i><div class="media-body">La méthode TEACCH : Cette technique est basée sur l'origine et les comportements spécifiques à l'autisme</div>
                         </li>
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">User administration</div>
+                            <i class="fas fa-square"></i><div class="media-body">L'ABA : Technique qui prend en charge les enfants dès leur plus jeune âge (dès 18 mois). </div>
                         </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Automate user signup</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Quick formatting tools</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Fast email checking</div>
-                        </li>
+                       
                     </ul>
-                    <a class="btn-solid-reg mfp-close" href="sign-up.html">SIGN UP</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
+                    <a class="btn-solid-reg mfp-close" href="https://sante.journaldesfemmes.fr/fiches-maladies/2062705-autisme-trouble-du-spectre-autistique-tsa-definition-signes-causes-test-scolarisation-association-france/"> En savoir plus </a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">Avant</a>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -467,24 +457,33 @@ include './login.php';
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h2>Now Is The Time To Upgrade Your Marketing Solution</h2>
-                        <p>Target the right customers for your business with the help of Tivo's patented segmentation technology and deploy efficient marketing campaigns. Keep your customers happy and loyal.</p>
+                        <h2> Les  4 exercices importants pour les enfants autistes </h2>
+                        <p>Voici une série d’exercices ou d’activités favorisant la stimulation des capacités cognitives des enfants atteints de TSA..</p>
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Understand customers and meet their requirements</div>
+                                <div class="media-body">Activités avec des chiffres:</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Targeted client base with Tivo's efficient technology</div>
+                                <div class="media-body">La musicothérapie</div>
                             </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Jeux d’imitation(dessiner des gestes..)</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Exercice physique(Foot,basketBall,Natation..)</div>
+                            </li>
+                            
                         </ul>
-                        <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
+                        <a class="btn-solid-reg page-scroll" href="https://www.creavea.com/actualite/activite-pour-enfant-autiste-5-idees-dactivites-manuelles-adaptees/">En savoir plus</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/details.png" alt="alternative">
+                        <img class="img-fluid" src="images/jeuenf.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -502,7 +501,7 @@ include './login.php';
                     <!-- Video Preview -->
                     <div class="image-container">
                         <div class="video-wrapper">
-                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=fLCjQJCekTs" data-effect="fadeIn">
+                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=L0KVKS4qVzM"  data-effect="fadeIn">
                                 <img class="img-fluid" src="images/video-image.png" alt="alternative">
                                 <span class="video-play-button">
                                     <span></span>
@@ -512,7 +511,7 @@ include './login.php';
                     </div> <!-- end of image-container -->
                     <!-- end of video preview -->
 
-                    <div class="p-heading">What better way to show off Tivo marketing automation saas app than presenting you some great situations of each module and tool available to users in a video</div>        
+                    <div class="p-heading">comprendre comment communiquer avec l'autisme</div>        
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -597,54 +596,58 @@ include './login.php';
         </div> <!-- end of container -->
     </div> <!-- end of slider-2 -->
     <!-- end of testimonials -->
-
+                   
+            
 
     <!-- Newsletter -->
   
 
                             <!-- Privacy Form -->
-                            <h2>Remplissez cette formulaire !</h2>
+                            <h2>Contactez nous  !</h2>
                             <div class="form-container">
-                                <form id="privacyForm" data-toggle="validator" data-focus="false">
+                                <form action="./PHPMailer/sendEmail.php"    method="post" >
                                     <div class="form-group">
-                                        <input type="text" class="form-control-input" id="pname" required>
+                                        <input   name="nameForm" type="text" class="form-control-input"  required>
                                         <label class="label-control" for="pname">Name</label>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control-input" id="pemail" required>
+                                        <input  name="emailForm" type="email" class="form-control-input" required>
                                         <label class="label-control" for="pemail">Email</label>
                                         <div class="help-block with-errors"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <select class="form-control-select" id="pselect" required>
-                                            <option class="select-option" value="" disabled selected>Select Option</option>
-                                            <option class="select-option" value="Delete data">Delete my data</option>
-                                            <option class="select-option" value="Show me data">Show me my data</option>
-                                        </select>
+                                    <div class="mb-3">
+                                                <input  name="subject" type="text" class="form-control" id="formGroupExampleInput" placeholder="Sujet?">
+                                    </div>
+                                            
+                                   <div class="form-group">
+                                        
                                         <div class="help-block with-errors"></div>
                                     </div>
-                                    <div class="form-group checkbox">
-                                        <input type="checkbox" id="pterms" value="Agreed-to-Terms" required>I have read and agree to Tivo's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
-                                        <div class="help-block with-errors"></div>
+                                    <div class="form-floating">
+                                      <textarea class="form-control"  name="text" placeholder="Exprimez-vous" id="floatingTextarea"></textarea>
                                     </div>
+                    
+                    <br>
                                     <div class="form-group">
-                                        <button type="submit" class="form-control-submit-button">SUBMIT</button>
+                                        <button name="submitForm" type="submit" class="form-control-submit-button">Envoyer</button>
                                     </div>
-                                    <div class="form-message">
-                                        <div id="pmsgSubmit" class="h3 text-center hidden"></div>
-                                    </div>
+                                   
                                 </form>
+                            </div>
+                    </div>
+                </div></div></div></div>
                             </div> <!-- end of form container -->
                             <!-- end of privacy form -->
-
-            <div class="row">
+            
+    </div>
+            <!-- <div class="row"> 
                 <div class="col-lg-12">
                     <div class="icon-container">
                         <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                <i class=" fab fa-facebook-f fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
@@ -671,15 +674,14 @@ include './login.php';
                                 <i class="fab fa-linkedin-in fa-stack-1x"></i>
                             </a>
                         </span>
-                    </div> <!-- end of col -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form -->
+                    </div>  end of col
+                </div>  end of col
+            </div>  end of row
+        </div>  end of container 
+    </div>  end of form -->
     <!-- end of newsletter -->
 
-                    </div>
-                </div>  </div>  </div>
+            </div></div></div>
            
     <!-- Footer -->
     <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill:#5f4def;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
@@ -694,6 +696,8 @@ include './login.php';
                         <i class="fas fa-square"></i>
 
                         <div class="media-body"> <a class="white"  href="./admin/connectAdmin.phtml"> Espace Admin </a> </div>
+                        <br> <br>
+                        <img src="./images/ieee.png">
                         </li>
                         </ul>
                     </div>

@@ -145,7 +145,7 @@ Modifier le Compte</button>
       <div class="modal-footer">
         <button  name="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
      
-        <a href="editAccount.php"  name="submitModification" type="button" class="btn btn-primary">Sauvegarde</a>
+        <a href="#"  name="submitModification" type="button" class="btn btn-primary">Sauvegarde</a>
       </div>
     </div>
   </div>

@@ -16,7 +16,7 @@
      echo "<div class='py-7'>";
      echo "<div class='col'>";
      echo "<br>";
- echo "<a href='http://localhost/Food/index.html' class='btn btn-primary float-end'> <i class='bi bi-house'> </i></a>";
+ echo "<a href='http://localhost/tivocom/web/index.php' class='btn btn-primary float-end'> <i class='bi bi-house'> </i></a>";
  echo "</div>";
      echo "<center>";
     echo "<br>"; echo "<br>";echo "<br>";echo "<br>";echo "<br>"; echo "<br>";echo "<br>";echo "<br>";echo "<br>";echo "<br>";echo "<br>";echo "<br>";

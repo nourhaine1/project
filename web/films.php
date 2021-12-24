@@ -28,7 +28,7 @@ include './login.php';
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Article Details - Tivo - SaaS App php Landing Page Template</title>
+    <title>Films</title>
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
