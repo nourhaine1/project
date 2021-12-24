@@ -60,7 +60,7 @@ if (!isset($_SESSION['name'])) {
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> 
+            <a  href="index.html"><img width="120px" height="140px" src="images/Wie.png" alt="alternative"></a> 
             
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -144,8 +144,8 @@ if (!isset($_SESSION['name'])) {
       </div>
       <div class="modal-body">
       <div class="col">
-          <form method="post" action="<?= $_SERVER['PHP_SELF']?>" data-toggle="validator" >
-            <input  name ="ageSasie" type="text" class="form-control" placeholder="age" aria-label="First name">
+          <form method="post" action="verifyAge.php" data-toggle="validator" >
+            <input  name ="ageSaisie" type="text" class="form-control" placeholder="age" aria-label="First name">
   </div>
 
 
@@ -153,22 +153,14 @@ if (!isset($_SESSION['name'])) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button name="submit" type="submit" class="btn btn-primary">Chercher</button>
+        <button name="submitSearch" type="submit" class="btn btn-primary">Chercher</button>
 </form>
       </div>
     </div>
   </div>
 </div>
-<?php
-if (isset($_POST["search"])) {
-      // (B1) SEARCH FOR USERS
-      require "verifyAge.php";
 
-      // (B2) DISPLAY RESULTS
-      if (count($results) > 0) { foreach ($results as $r) {
-        printf("<div>%s - %s</div>", $r["name"], $r["email"]);
-      }} else { echo "No results found"; }
-      ?>
+     
     <!-- Terms Content -->
     <div class="ex-basic-2">
         <div class="container">
@@ -177,50 +169,17 @@ if (isset($_POST["search"])) {
                     <div class="text-container">
                         
                         <div class="card-group">
-                                        
-                        <?php   
-                        require 'verifyAge.php';
-                        $errors=[];
-                      
-                                          foreach ($videos as $video) :
-                                    ?>
-                                            <div class="card">
-                                        <div class="card-body">
-                                            here here
-                                                <h2 class="card-title"><?=$video['name']?></h2>
-                                                    <p class="card-text">
-                                                     <video width="800" height="800" controls>
-                                                                     <source src="./images/<?= $video['path']?>" type=video/ogg>
-                                                                      <source src="./images/<?= $video['path']?>" type=video/mp4>
-                                                    </video>
-                                                    </p>
-                                            </div>
-                        
-                                                <div class="card-footer">
-                                                            <p class="card-text">
-                                                        <?=$video['description']?>.</p>
-                                                </div>
-                                    </div>
-                    
-                        
-                                    </div>
-                            
-                                 <?php
-                                 endforeach;
-                               
-                                
-                               
-                                 ?>  
+                     <?php
+                     
+                     ?>
+                  
                                    
-                                   <?php
-                                 };
                                
-                                 ?> 
-                                            
                      </div>
                  </div>
              </div>
-            
+            </div>
+        </div></div>
         </div>
     </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -275,11 +234,11 @@ if (isset($_POST["search"])) {
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
+                                <div class="media-body"></div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@Tivo.com">contact@Tivo.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.Tivo.com</a></div>
+                                <div class="media-body"><a class="white" href="#">gmail:wieisetbizerte@gmail.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.IEEE.com</a></div>
                             </li>
                         </ul>
                     </div> 
@@ -295,7 +254,7 @@ if (isset($_POST["search"])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p>
+                    <p class="p-small">Copyright © 2022 <a href="https://inovatik.com">IEEE ISET BIZERTE</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->

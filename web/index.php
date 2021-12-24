@@ -59,7 +59,7 @@ session_start();
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="https://www.facebook.com/IEEE-WIE-ISET-Bizerte-Student-Affinity-Group-291427792673546"><img width="120px;" height="120px;" class="logo-image" src="images/wie.png" alt="alternative"></a> 
+            <a  href="https://www.facebook.com/IEEE-WIE-ISET-Bizerte-Student-Affinity-Group-291427792673546"><img width="150px" height="150px" src="images/wie.png" alt="alternative"></a> 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-awesome fas fa-bars"></span>
@@ -697,7 +697,7 @@ session_start();
 
                         <div class="media-body"> <a class="white"  href="./admin/connectAdmin.phtml"> Espace Admin </a> </div>
                         <br> <br>
-                        <img src="./images/ieee.png">
+                        <img width="120px" height="120px" src="./images/ieee.png">
                         </li>
                         </ul>
                     </div>
@@ -727,7 +727,7 @@ session_start();
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com">contact@tivo.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.tivo.com</a></div>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com">gmail:wieisetbizerte@gmail.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.tivo.com</a></div>
                             </li>
                         </ul>
                     </div> 
