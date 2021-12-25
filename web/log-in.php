@@ -125,12 +125,12 @@ header('location:index.php');
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <input type="text"  name="password" class="form-control-input" id="lpassword" required>
-                                <label class="label-control" for="lpassword">Password</label>
+                                <input type="password"  name="password" class="form-control-input" id="lpassword" required>
+                                <label class="label-control" for="lpassword">Mot de passe</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <button  name="submit" type="submit" class="form-control-submit-button">LOG IN</button>
+                                <button  name="submit" type="submit" class="form-control-submit-button">Se connecter</button>
                             </div>
                             <div class="form-message">
                                 <div id="lmsgSubmit" class="h3 text-center hidden"></div>

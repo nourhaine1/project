@@ -88,13 +88,13 @@ include './connectAdmin.php';
         </div>
         <div class="card-footer">
             <div class="col vr">
-                <p><span class="count">1.8K</span> Videos</p>
+                <p><span class="count">3</span> Videos</p>
             </div>
             <div class="col">
-                <p><span class="count">2.0K</span> Films</p>
+                <p><span class="count">5</span> Films</p>
             </div>
             <div class="col">
-                <p><span class="count">2.0K</span> Jeux</p>
+                <p><span class="count">4</span> Jeux</p>
             </div>
           
 
@@ -112,7 +112,7 @@ Modifier le Compte</button>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-          <form action="<?= $_SERVER['PHP_SELF'] ?>" method ="post">
+          <form action="editAccount.php" method ="post">
           <div class="form-floating mb-3">
        
                 <input name="email" type="email" class="form-control" id="floatingInput" value="<?=$_SESSION['email']?>">
@@ -139,14 +139,15 @@ Modifier le Compte</button>
                         <input name ="avatar" type="file" class="form-control" id="inputGroupFile01">
             </div>
 
-            </form>
+            
       </div>
       
       <div class="modal-footer">
         <button  name="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
      
-        <a href="#"  name="submitModification" type="button" class="btn btn-primary">Sauvegarde</a>
+        <button name="submitModification" type="submit" class="btn btn-primary">Sauvegarde</button>
       </div>
+      </form>
     </div>
   </div>
 </div>

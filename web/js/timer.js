@@ -9,14 +9,14 @@ function countDown(){
         
       if ((distance < 15*60) &&( i==0)) {
         i=1;
-      alert("15 Minutes Remaining");
+      alert("Il vous reste que 15 minutes ..");
       
   
     }
       if (distance < 0) {
-        alert("Time To Go Out and Make Some Friends");
+        alert("C'est le temps de sortir ..Byee");
         clearInterval(x);
-        location.replace("logout.php");
+        location.replace("./logout.php");
       }
     }, 1000);
 }

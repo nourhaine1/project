@@ -39,7 +39,7 @@ if (!isset($_SESSION['name'])) {
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
-<body onload="countDown()" data-spy="scroll" data-target=".fixed-top">
+<body data-spy="scroll" data-target=".fixed-top">
     
     <!-- Preloader -->
 	<div class="spinner-wrapper">
@@ -72,10 +72,10 @@ if (!isset($_SESSION['name'])) {
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.php#header">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="index.php#header">Acceuil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.php#features">FEATURES</a>
+                        <a class="nav-link page-scroll" href="index.php#features">Symptômes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="index.php#details">DETAILS</a>
@@ -130,9 +130,7 @@ if (!isset($_SESSION['name'])) {
     </div> <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#search">
-  Chercher
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -145,7 +143,7 @@ if (!isset($_SESSION['name'])) {
       <div class="modal-body">
       <div class="col">
           <form method="post" action="verifyAge.php" data-toggle="validator" >
-            <input  name ="ageSaisie" type="text" class="form-control" placeholder="age" aria-label="First name">
+            <input value ="3 ou5" name ="ageSaisie" type="text" class="form-control" placeholder="age" aria-label="First name">
   </div>
 
 
@@ -153,7 +151,7 @@ if (!isset($_SESSION['name'])) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button name="submitSearch" type="submit" class="btn btn-primary">Chercher</button>
+        <button name="submitSearch" type="submit" onclick="countDown()"  class="btn btn-primary">Chercher</button>
 </form>
       </div>
     </div>
@@ -170,8 +168,30 @@ if (!isset($_SESSION['name'])) {
                         
                         <div class="card-group">
                      <?php
-                     
+                     //include 'verifyAge.php';
+                     if (isset($_POST['submitSearch'])){
+                     foreach ($videos as $video) { ?>
+                       <h2> <?=$video['name']?></h2>
+                        <video width="280" height="222" controls="controls"> 
+            <source src="./images/<?=$video['path']?>" type="video/mp4" /> 
+            <source src="./images/<?=$video['path']?>" type="video/ogg" /> 
+            <source src="./images/<?=$video['path']?>" type="video/webm" /> 
+   <track src="sous-titre-fr.vtt" kind="subtitles" srclang="fr" label="francais">
+     <p>Votre navigateur ne supporte pas l'élément vidéo.</p> 
+  </video> 
+                       
+                      <?php
+                    }
+                }
+                else {
+                ?>
+                 
+                <h2>Pour voir des videos il faut indiquer l'age de votre enfant !</h2>
+                <?php
+                }
                      ?>
+                    
+                     
                   
                                    
                                
@@ -193,7 +213,6 @@ if (!isset($_SESSION['name'])) {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Terms & Conditions</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -209,22 +228,23 @@ if (!isset($_SESSION['name'])) {
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col first">
-                        <h4>About Tivo</h4>
-                        <p class="p-small">We're passionate about offering some of the best business growth services for start more words</p>
+                    <img width="150px" height="150px" src="./images/ieee.png">  
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col middle">
-                        <h4>Important Links</h4>
+                        <h4>Liens Importants</h4>
                         <ul class="list-unstyled li-space-lg p-small">
+                        <i class="fas fa-square"></i>
+                        <a class="white" href="https://ieeexplore.ieee.org/Xplore/guesthome.jsp">IEEE Xplores</a></div>
+                        <div class="media-body"> 
+                                                  
+
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white" href="#your-link">startupguide.com</a></div>
+                                
                             </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
-                            </li>
+                            <br>
+                           
                         </ul>
                     </div>
                 </div> <!-- end of col -->
@@ -233,12 +253,19 @@ if (!isset($_SESSION['name'])) {
                         <h4>Contact</h4>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-map-marker-alt">ISET Bizerte</i>
                                 <div class="media-body"></div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="#">gmail:wieisetbizerte@gmail.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.IEEE.com</a></div>
+                                <div class="media-body"><a class="white" href="#">wieisetbizerte@gmail.com</a> 
+                               <br>
+                                </div>
+                            </li>
+                                <i class="bi bi-facebook"></i><a class="white" href="https://www.facebook.com/profile.php?id=100063628980827">IEEE ISET Bizerte Student Branch</a>
+                                <br>
+                                <i class="bi bi-instagram"></i><a class="white" href="https://www.instagram.com/ieeeisetbizertestudentbranch/">IEEE ISET Bizerte Student Branch</a>
+                            </div>
                             </li>
                         </ul>
                     </div> 
@@ -254,7 +281,7 @@ if (!isset($_SESSION['name'])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2022 <a href="https://inovatik.com">IEEE ISET BIZERTE</a></p>
+                    <p class="p-small">Copyright © 2022 <a href="https://www.facebook.com/profile.php?id=100063628980827">IEEE ISET BIZERTE</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
@@ -271,12 +298,35 @@ if (!isset($_SESSION['name'])) {
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script src="js/timer.js"></script>
     <script>
         
              $(document).ready(function(){
         $("#search").modal('show');
                 });
+</script>
+<script>
+    let distance =3600;
+let i=0;
+function countDown(){
+    
+    var x = setInterval(function() {
+    
+     
+      distance--;
+        
+      if ((distance < 15*60) &&( i==0)) {
+        i=1;
+      alert("Il vous reste que 15 minutes ..");
+      
+  
+    }
+      if (distance < 0) {
+        alert("C'est le temps de sortir ..Byee");
+        clearInterval(x);
+        location.replace("./logout.php");
+      }
+    }, 1000);
+}
 </script>
 </body>
 </html>

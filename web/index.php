@@ -59,7 +59,7 @@ session_start();
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a  href="https://www.facebook.com/IEEE-WIE-ISET-Bizerte-Student-Affinity-Group-291427792673546"><img width="150px" height="150px" src="images/wie.png" alt="alternative"></a> 
+            <a  href="https://www.facebook.com/IEEE-WIE-ISET-Bizerte-Student-Affinity-Group-291427792673546"><img width="110px" height="110px" src="images/wie.png" alt="alternative"></a> 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-awesome fas fa-bars"></span>
@@ -94,13 +94,14 @@ session_start();
                   
                 </ul>
                 <span class="nav-item">
-                <?=(isset ($_SESSION['id'])) ?  '<li class="nav-item dropdown"> 
-                        
-                        <img  class="rounded-circle" src="./images/<?=$_SESSION["avatar"] ?>" >  
+                <?=(isset ($_SESSION['id'])) ?  '
+                        <li class="nav-item dropdown"> 
+                        <a class="dropdown-item" href="./compteClient.php"> Compte <? echo $_SESSION["name"] ?></a>
+
+                   
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./compteClient.php"> <?=$_SESSION["name"] ?></a>
                        
-                                <div class="dropdown-items-divide-hr"></div>
+                                
                             <a class="dropdown-item" href="logout.php">se deconnecter</a>
                         </div>
                     </li> ': ' <li class="nav-item "><a class="btn-outline-sm" href="./log-in.php"> Se connecter </a> </li>' ?>
@@ -128,9 +129,9 @@ session_start();
                     <div class="col-lg-6 col-xl-5">
                         <div class="text-container">
                             <h1>2 Avril 
-                                C'est notre fete</h1>
+                                C'est notre fête</h1>
                             <p class="p-large">Le comportement c’est la communication. Changez l’environnement et les comportements changeront.</p>
-                            <a class="btn-solid-lg page-scroll" href="./signup.php">SIGN UP</a>
+                            <a class="btn-solid-lg page-scroll" href="./signup.php">s'inscrire</a>
                             
                         </div> 
                          <br><!-- end of text-container -->
@@ -159,44 +160,6 @@ session_start();
     <!-- end of header -->
 
 
-    <!-- Customers -->
-    <div class="slider-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Image Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container image-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                        <img class="img-fluid" src="images/customer-logo-1.png" alt="alternative">
-                                </div>
-                                <div class="swiper-slide">
-                                        <img class="img-fluid" src="images/customer-logo-2.png" alt="alternative">
-                                </div>
-                                <div class="swiper-slide">
-                                        <img class="img-fluid" src="images/customer-logo-3.png" alt="alternative">
-                                </div>
-                                <div class="swiper-slide">
-                                        <img class="img-fluid" src="images/customer-logo-4.png" alt="alternative">
-                                </div>
-                                <div class="swiper-slide">
-                                        <img class="img-fluid" src="images/customer-logo-5.png" alt="alternative">
-                                </div>
-                                <div class="swiper-slide">
-                                        <img class="img-fluid" src="images/customer-logo-6.png" alt="alternative">
-                                </div>
-                            </div> <!-- end of swiper-wrapper -->
-                        </div> <!-- end of swiper container -->
-                    </div> <!-- end of slider-container -->
-                    <!-- end of image slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-1 -->
-    <!-- end of customers -->
 
 
     <!-- Description -->
@@ -365,90 +328,9 @@ session_start();
     </div> <!-- end of lightbox-basic -->
     <!-- end of details lightbox 1 -->
 
-    <!-- Details Lightbox 2 -->
-	<div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="container">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-8">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-lightbox.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <h3>Campaign Monitoring</h3>
-                    <hr>
-                    <h5>Core service</h5>
-                    <p>It's very easy to start using Tivo. You just need to fill out and submit the Sign Up Form and you will receive access to the app.</p>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">List building framework</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Easy database browsing</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">User administration</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Automate user signup</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Quick formatting tools</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Fast email checking</div>
-                        </li>
-                    </ul>
-                    <a class="btn-solid-reg mfp-close" href="sign-up.html">SIGN UP</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 2 -->
+   
 
-    <!-- Details Lightbox 3 -->
-	<div id="details-lightbox-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="container">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-8">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-lightbox.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <h3>Analytics Tools</h3>
-                    <hr>
-                    <h5>Core service</h5>
-                    <p>It's very easy to start using Tivo. You just need to fill out and submit the Sign Up Form and you will receive access to the app.</p>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">List building framework</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Easy database browsing</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">User administration</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Automate user signup</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Quick formatting tools</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Fast email checking</div>
-                        </li>
-                    </ul>
-                    <a class="btn-solid-reg mfp-close" href="sign-up.html">SIGN UP</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 3 -->
-    <!-- end of details lightboxes -->
+    
 
 
     <!-- Details -->
@@ -535,11 +417,11 @@ session_start();
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-1.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/testimonial-1.png" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">I started to use Tivo with the free trial about a year ago and never stopped since then. It does all the repeating marketing tasks and allows me to focus on core development activities like new product research and design. I love it and recommend it to everyone.</div>
-                                        <div class="testimonial-author">Jude Thorn - Online Marketer</div>
+                                        <div class="testimonial-text"> A prolific writer and speaker not only on the subject of autism but also on animal behaviour, Dr. Grandin is a Professor of Animal Science at Colorado University, where she has been called “the most accomplished and well-known adult with autism in the world.”.</div>
+                                        <div class="testimonial-author">Dr. Temple Grandin</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -547,11 +429,11 @@ session_start();
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-2.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/testimonial-2.png" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Awesome features for the money. I never thought such a low ammount of money would bring me so many leads per month. Before Tivo I used the services of an agency which cost 10x more and delivered far less. Highly recommended to marketers focused on results.</div>
-                                        <div class="testimonial-author">Roy Smith - Developer</div>
+                                        <div class="testimonial-text">A talented illustrator and animator, Bowman launched her own company, DaniMation Entertainment, at just 11 years-old and began working professionally in the animation industry three years later..</div>
+                                        <div class="testimonial-author">Dani Bowman</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -559,11 +441,11 @@ session_start();
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-3.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/testimonial-3.png" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Tivo is the best marketing automation app for small and medium sized business. It understands the mindset of young entrepreneurs and provides the necessary data for wise marketing decisions. Just give it a try and you will definitely not regret spending your time.</div>
-                                        <div class="testimonial-author">Marsha Singer - Online Marketer</div>
+                                        <div class="testimonial-text">As famous for his eccentricity as he is for painting cans of soup, Andy Warhol was never diagnosed with autism in his lifetime..</div>
+                                        <div class="testimonial-author"> Andy Warhol</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -571,11 +453,11 @@ session_start();
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-4.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/testimonial-4.png" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Tivo is one of the greatest marketing automation apps out there. I especially love the Reporting Tools module because it gives me such a great amount of information based on little amounts of input gathered in just few weeks of light weight usage. Recommended!</div>
-                                        <div class="testimonial-author">Ronda Louis - Online Marketer</div>
+                                        <div class="testimonial-text">Canadian performer Dan Aykroyd has been open about being diagnosed with Tourettes and Asperger’s, with the former being treated as a young child.</div>
+                                        <div class="testimonial-author">Dan Aykroyd</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -641,48 +523,9 @@ session_start();
                             <!-- end of privacy form -->
             
     </div>
-            <!-- <div class="row"> 
-                <div class="col-lg-12">
-                    <div class="icon-container">
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class=" fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div>  end of col
-                </div>  end of col
-            </div>  end of row
-        </div>  end of container 
-    </div>  end of form -->
-    <!-- end of newsletter -->
-
-            </div></div></div>
-           
+    
+                
+          
     <!-- Footer -->
     <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill:#5f4def;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
     <div class="footer">
@@ -693,26 +536,23 @@ session_start();
                         <h4>Administration</h4>
                         <ul class="list-unstyled li-space-lg p-small">
                         <li class="media">
-                        <i class="fas fa-square"></i>
-
-                        <div class="media-body"> <a class="white"  href="./admin/connectAdmin.phtml"> Espace Admin </a> </div>
+                      
+                                <div class="media-body">   <i class="fas fa-square"></i> <a class="white"  href="./admin/connectAdmin.phtml"> Espace Admin </a> </div>
                         <br> <br>
-                        <img width="120px" height="120px" src="./images/ieee.png">
+                       
                         </li>
                         </ul>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col middle">
-                        <h4>Important Links</h4>
+                    <img width="150px" height="150px" src="./images/ieee.png">                            </li>
+
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white" href="#your-link">startupguide.com</a></div>
-                            </li>
+                                
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
+                                
                             </li>
                         </ul>
                     </div>
@@ -727,8 +567,11 @@ session_start();
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com">gmail:wieisetbizerte@gmail.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.tivo.com</a></div>
-                            </li>
+                                <div class="media-body"><a class="white" href="">wieisetbizerte@gmail.com</a>
+                            </li>     <i class="bi bi-facebook"></i><a class="white" href="https://www.facebook.com/profile.php?id=100063628980827">IEEE ISET Bizerte Student Branch</a>
+                                <br>
+                                <i class="bi bi-instagram"></i><a class="white" href="https://www.instagram.com/ieeeisetbizertestudentbranch/">IEEE ISET Bizerte Student Branch</a>
+                            </div>
                         </ul>
                     </div> 
                 </div> <!-- end of col -->

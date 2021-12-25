@@ -1,7 +1,6 @@
 <?php
 
 include './login.php';
- echo $_SESSION['name'];
 
 ?>
 
@@ -124,7 +123,7 @@ Modifier le Compte</button>
             </div>
             <br>
             <div class="form-floating">
-                        <input name="pass" type="password" class="form-control" id="floatingPassword" value="<?=$_SESSION['passC']?>">
+                        <input name="pass" type="password" class="form-control" id="floatingPassword" ">
                         <label for="floatingPassword">Mot de passe</label>
             </div>
             <br>

@@ -40,7 +40,8 @@ include './addVideo.php';
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
-<body data-spy="scroll" data-target=".fixed-top">
+
+<body  data-spy="scroll" data-target=".fixed-top">
     
     <!-- Preloader -->
 	<div class="spinner-wrapper">
@@ -240,9 +241,9 @@ include './addVideo.php';
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <h3>Private Data We Receive And Collect</h3>
-                        <p>Tivo also automatically collects and receives certain information from your computer or mobile device, including the activities you perform on our Website, the Platforms, and the Applications, the type of hardware and software you are using (for example, your operating system or browser), and information obtained from cookies. For example, each time you visit the Website or otherwise use the Services, we automatically collect your IP address, browser and device type, access times, the web page from which you came, the regions from which you navigate the web page, and the web page(s) you access (as applicable). There is more to this section and we want to keep you informed about it.</p>
-                        <p>When you first register for a Tivo account, and when you use the Services, we collect some <a class="blue" href="#your-link">Personal Information</a> about you such as:</p>
+                        <h3>Autisme</h3>
+                        <p>L’autisme, dont les manifestations sont décrites sous l'intitulé de troubles du spectre de l'autisme (TSA), est un trouble neurodéveloppemental humain caractérisé par des difficultés dans les interactions sociales et la communication, et des comportements et intérêts à caractère restreint, répétitif et stéréotypé. Il existe différents niveaux de sévérité des symptômes, d'où la notion de « spectre ». Le diagnostic est indépendant des niveaux langagier et intellectuel de la personne. Les troubles associés sont fréquents. L'autisme a vraisemblablement joué un rôle positif dans l'histoire évolutive humaine.</p>
+                        <p>La compréhension de l'autisme a grandement évolué, d'une pathologie jadis considérée comme rare et sévère, vers un regroupement de symptômes communs, les troubles du spectre de l'autisme, précédemment nommés troubles envahissants du développement. Ils pourraient avoir des causes diverses, provoquant les mêmes types de comportement clinique chez les personnes concernéesHAS 1. Leurs origines comprennent une part génétique majoritaire et complexe, impliquant plusieurs gènes, et des influences environnementales mineures. La notion de « spectre de l'autisme » reflète la diversité des phénotypes observés.</p>
                         <div class="row">
                             <div class="col-md-6">
                                
@@ -255,82 +256,36 @@ include './addVideo.php';
                     </div> <!-- end of text-container-->
                     
                     <div class="text-container">
-                        <h3>How We Use Tivo Landing Page Data</h3>
-                        <p>Tivo Landing Page Template uses visitors' data for the following general purposes and for other specific ones that are important:</p>
+                        <h3>autisme et ecrans</h3>
+                        <p>«L'autisme est une condition hétérogène aux syndromes divers. Elle a longtemps été mal comprise et mal diagnostiquée. On a dit que c'était la faute des femmes qui n'aimaient pas assez leurs enfants. C'est faux. On a dit que c'était une maladie génétique. Pourtant, sur 800 mutations peut-être liées à l'autisme, la relation entre la mutation et le syndrome est rarement causale. De même, il n'existe aucune preuve contraignante d'un déclenchement de l'autisme par les écrans. C'est une maladie du développement dont l'origine est à chercher notamment dans les effets de l'environnement pendant la grossesse et l'accouchement – prématurité, inflammation intra-utérine, etc.».</p>
                         <ol class="li-space-lg">
-                            <li>To identify you when you login to your account so we can start or user security process for the entire session and duration</li>
-                            <li>To enable us to operate the Services and provide them to you without fear of losing precious confidential information of your users</li>
-                            <li>To verify your transactions and for purchase confirmation, billing, security, and authentication (including security tokens for communication with installed). Always take security measures like not saving passwords in your browser or writing them down</li>
-                            <li>To analyze the Website or the other Services and information about our visitors and users, including research into our user demographics and user behaviour in order to improve our content and Services</li>
-                            <li>To contact you about your account and provide customer service support, including responding to your comments and questions</li>
-                            <li>To share aggregate (non-identifiable) statistics about users of the Services to prospective advertisers and partners</li>
-                            <li>To keep you informed about the Services, features, surveys, newsletters, offers, surveys, newsletters, offers, contests and events we think you may find useful or which you have requested from us</li>
-                            <li>To sell or market Tivo Landing Page products and services to you or in other parts of the world where legislation is less restrictive</li>
-                            <li>To better understand your needs and the needs of users in the aggregate, diagnose problems, analyze trends, improve the features and usability of the Services, and better understand and market to our customers and users</li>
-                            <li>To keep the Services safe and secure for everyone using the app from administrators to regular users with limited rights</li>
-                            <li>We also use non-identifiable information gathered for statistical purposes to keep track of the number of visits to the Services with a view to introducing improvements and improving usability of the Services. We may share this type of statistical data so that our partners also understand how often people use the Services, so that they, too, may provide you with an optimal experience.</li>
+                            «L'autisme particulièrement en France a été longtemps considéré comme une maladie psychiatrique causée par un défaut des liens précoces et sa prise en charge consistait essentiellement en des mesures d'enfermement avec camisole chimique tout en invitant les parents à faire le deuil de leur enfant. C'est vraisemblablement grâce à l'action conjointe des associations d'usagers et des progrès dans des sciences notamment neuro-psychologiques et éducatives que l'autisme est de plus en plus considéré comme une condition neuro-développementale pour laquelle des méthodes spécifiques d'éducation permettent d'espérer des progrès de l'inclusion scolaire et sociale. L'autisme vu comme une altérité à inclure dans notre collectif, visée de cette longue et difficile élaboration sociale, est à nouveau remis en question par la "révélation" largement diffusée dans le social à travers une forte campagne médiatique, que la surexposition précoce aux écrans pourrait induire l'"autisme virtuel", "autisme secondaire aux écrans" ou "d'allure autistique"… Cette affirmation qui ne repose sur rien d'autre qu'une intuition clinique (comme la mère frigidaire ou crocodile) renvoie ipso facto l'autisme dans le registre d'un pathologique qu'il faudrait ramener à la normalité par l'extraction des écrans dans l'espérance d'une "guérison miraculeuse".»
                         </ol>
                     </div> <!-- end of text-container -->
 
-                    <div class="text-container">
-                        <h3>Customer Content We Process For Customers</h3>
-                        <p>Tivo is a HTML landing page template tool. By its nature, Services enable our customers to promote their products and services integrate with hundreds of business applications that they already use, all in one place. Customer security is our primary focus in this document.</p>
-                        <p>Services help our customers promote their products and services, marketing and advertising; engaging audiences; scheduling and publishing messages; and analyze the results and improve the security levels in all areas of the application.</p>
-                    </div> <!-- end of text container -->
-
-                    <div class="text-container">
-                        <h3>Consent Of Using Tivo Landing Page</h3>
-					    <p>By using any of the Services, or submitting or collecting any Personal Information via the Services, you consent to the collection, transfer, storage disclosure, and use of your Personal Information in the manner set out in this Privacy Policy. If you do not consent to the use of your Personal Information in these ways, please stop using the Services should be safe and easy to guarantee a great user experience.</p>
-                    </div> <!-- end of text-container -->
+                    
                                        
                     <div class="row">
                         <div class="col-md-6">
                             <div class="text-container last">
                                 <h3>Inquire What Data We Have</h3>
-                                <p>Tivo Landing Page uses tracking technology on the landing page, in the Applications, and in the Platforms, including mobile application identifiers and a unique Tivo user ID to help us. Recognize you across different Services, to monitor usage and web traffic routing for the Services, and to customize and improve the Services.</p>
-                                <p>By visiting Tivo or using the Services you agree to the use of cookies in your browser and HTML-based emails. You visit a website, by using any of the Services, or submitting or collecting any Personal Information via the Services, you consent and use of your <a class="blue" href="#your-link">Personal Information</a></p>
+                                <p>TL’ histoire de l’autisme retiendra dans un premier temps les travaux de Léo Kanner qui ont tout de suite connu un succès international du fait de leur publication en anglais, l’article de Hans Asperger étant en Allemand, il n’a pas immédiatement attiré l’attention de la communauté scientifique. Il a fallu attendre que Lorna Wing, psychiatre britannique, publie en 1981 un article intitulé Asperger’s Syndrome : a Clinical Account pour mettre en avant les travaux d’Hans Asperger. L’article originel d’Asperger ne sera traduit qu’en 1991 par Uta Frith.</p>
+                                <p>L’ histoire de l’autisme retiendra dans un premier temps les travaux de Léo Kanner qui ont tout de suite connu un succès international du fait de leur publication en anglais, l’article de Hans Asperger étant en Allemand, il n’a pas immédiatement attiré l’attention de la communauté scientifique. Il a fallu attendre que Lorna Wing, psychiatre britannique, publie en 1981 un article intitulé Asperger’s Syndrome : a Clinical Account pour mettre en avant les travaux d’Hans Asperger. L’article originel d’Asperger ne sera traduit qu’en 1991 par Uta Frith.</a></p>
                             </div> <!-- end of text container -->
                         </div> <!-- end of col-->
                         <div class="col-md-6">
 
                             <!-- Privacy Form -->
                             <div class="form-container">
-                                <form id="privacyForm" data-toggle="validator" data-focus="false">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control-input" id="pname" required>
-                                        <label class="label-control" for="pname">Name</label>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control-input" id="pemail" required>
-                                        <label class="label-control" for="pemail">Email</label>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control-select" id="pselect" required>
-                                            <option class="select-option" value="" disabled selected>Select Option</option>
-                                            <option class="select-option" value="Delete data">Delete my data</option>
-                                            <option class="select-option" value="Show me data">Show me my data</option>
-                                        </select>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="form-group checkbox">
-                                        <input type="checkbox" id="pterms" value="Agreed-to-Terms" required>I have read and agree to Tivo's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="form-control-submit-button">SUBMIT</button>
-                                    </div>
-                                    <div class="form-message">
-                                        <div id="pmsgSubmit" class="h3 text-center hidden"></div>
-                                    </div>
-                                </form>
+                             
+<img src="./images/description-1.png" alt="" srcset="">
+                            
                             </div> <!-- end of form container -->
                             <!-- end of privacy form -->
 
                         </div> <!-- end of col--> 
                     </div> <!-- end of row -->
-                    <a class="btn-outline-reg" href="logout.php">BACK</a>
+                    <a class="btn-outline-reg" href="logout.php">Sortir</a>
                 </div> <!-- end of col-->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -339,29 +294,18 @@ include './addVideo.php';
 
 
     <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Privacy Policy</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
+    
 
     
     <!-- Footer -->
-    <svg class="ex-footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill:#5f4def;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
+    <svg class="ex-footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill:#5f4def;}</></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
     <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col first">
-                        <h4>About Tivo</h4>
-                        <p class="p-small">We're passionate about offering some of the best business growth services for start more words</p>
+                        <h4>Women In Engineering</h4>
+                        <p class="p-small">WIE ISET Bizerte </p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
@@ -370,11 +314,9 @@ include './addVideo.php';
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white" href="#your-link">startupguide.com</a></div>
+                                <div class="media-body"> <a class="white" href="https://ieeexplore.ieee.org/Xplore/guesthome.jsp">IEEE Xplorex</a></div>
                             </li>
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
                             </li>
                         </ul>
                     </div>
@@ -385,11 +327,10 @@ include './addVideo.php';
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
+                                <div class="media-body">IEEE ISET Bizerte</div>
                             </li>
                             <li class="media">
-                                <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@Tivo.com">contact@Tivo.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.Tivo.com</a></div>
+                                <i class="fas fa-envelope">wieisetbizerte@gmail.com</i>
                             </li>
                         </ul>
                     </div> 
@@ -405,7 +346,7 @@ include './addVideo.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p>
+                    <p class="p-small">Copyright © 2021  IEEE ISET BIZERTE</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
